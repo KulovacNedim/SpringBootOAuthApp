@@ -36,8 +36,8 @@ spring:
             clientSecret: 3bc0f6b8332f93076354c2a5bada2f5a05aea60d
             redirectUriTemplate: "{baseUrl}/oauth2/callback/{registrationId}"
             scope:
-              - user:email
-              - read:user
+              - User:email
+              - read:User
         provider:
           facebook:
             authorizationUri: https://www.facebook.com/v3.0/dialog/oauth
@@ -49,7 +49,7 @@ app:
     tokenExpirationMsec: 864000000
   oauth2:
     # After successfully authenticating with the OAuth2 Provider,
-    # we'll be generating an auth token for the user and sending the token to the
+    # we'll be generating an auth token for the User and sending the token to the
     # redirectUri mentioned by the frontend client in the /oauth2/authorize request.
     # We're not using cookies because they won't work well in mobile clients.
     authorizedRedirectUris:
